@@ -6,6 +6,7 @@ import words from './words'
 import calc from './calc'
 import choose from './words/choose'
 import chooseWord from './words/choose-word'
+import table from './multi-table/table'
 
 export interface IOption {
   title: string
@@ -39,7 +40,7 @@ function speak(_msg: string) {
   })
 }
 
-const hooks = [multiTable, words, calc, choose, chooseWord]
+const hooks = [multiTable, words, calc, choose, chooseWord, table]
 
 export function use(_ele: any) {
   let total = 100
