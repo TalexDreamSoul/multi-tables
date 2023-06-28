@@ -1,5 +1,8 @@
 <script setup>
 import { wrongs } from './../hooks/index'
+
+// 将 wrongs 的每一项 ts 倒叙
+const _w = computed(() => [...wrongs].reverse())
 </script>
 
 <template>
