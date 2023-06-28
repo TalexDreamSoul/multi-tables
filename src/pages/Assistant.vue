@@ -32,10 +32,37 @@ const items = [
         </div>
       </div>
     </div>
+
+    <div class="Wrong-Button" @click="() => $router.push('/Wrongs')">
+      我的错题
+    </div>
   </div>
 </template>
 
 <style>
+.Wrong-Button:hover {
+  cursor: pointer;
+  opacity: .75;
+  background-color: #6A9FB550;
+  filter: drop-shadow(0 0 1rem #6A9FB580);
+}
+
+.Wrong-Button {
+  display: inline-block;
+  margin-top: 2rem;
+
+  width: 8rem;
+  height: 3rem;
+  line-height: 2.6rem;
+
+  font-size: 1.5rem;
+  font-weight: 300;
+
+  border-radius: 8px;
+  transition: all .25s;
+  border: 1px solid #323232;
+}
+
 .Assistant-Desc {
   position: relative;
 
