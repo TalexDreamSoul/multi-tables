@@ -20,7 +20,7 @@ onMounted(() => {
 <style>
 .App-Container {
   position: absolute;
-  padding: 8rem;
+  padding: 2rem;
 
   top: 50%;
   left: 50%;

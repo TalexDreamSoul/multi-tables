@@ -4,6 +4,8 @@ import { useRouter } from 'vue-router'
 import multiTable from './multi-table'
 import words from './words'
 import calc from './calc'
+import choose from './words/choose'
+import chooseWord from './words/choose-word'
 
 export interface IOption {
   title: string
@@ -37,7 +39,7 @@ function speak(_msg: string) {
   })
 }
 
-const hooks = [multiTable, words, calc]
+const hooks = [multiTable, words, calc, choose, chooseWord]
 
 export function use(_ele: any) {
   let total = 100
@@ -81,7 +83,7 @@ export function use(_ele: any) {
           _timing.value._ += 1
 
           if (_timing.value._ >= time) {
-            if (option.count <= total) {
+            if (option.count < total) {
               await speak('练习结束，挑战失败！')
               const _ = Math.round(option.correct / option.count * 100)
               await speak(`正确率 ${_}%，未合格！`)
@@ -137,7 +139,7 @@ export function use(_ele: any) {
       option.correct += 1
       await speak('答对了')
 
-      if (option.count > total) {
+      if (option.count >= total) {
         await speak('练习结束')
 
         if (per > 0) {

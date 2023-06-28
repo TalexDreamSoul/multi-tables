@@ -1,71 +1,4 @@
-const words = [
-  {
-    w: 'apple',
-    o: '苹果',
-  },
-  {
-    w: 'pear',
-    o: '梨',
-  },
-  {
-    w: 'banana',
-    o: '香蕉',
-  },
-  {
-    w: 'kite',
-    o: '风筝',
-  },
-  {
-    w: 'grapes',
-    o: '葡萄',
-  },
-  {
-    w: 'watermelon',
-    o: '西瓜',
-  },
-  {
-    w: 'orange',
-    o: '橘子',
-  },
-  {
-    w: 'strawberry',
-    o: '草莓',
-  },
-  {
-    w: 'pineapple',
-    o: '菠萝',
-  },
-  {
-    w: 'mango',
-    o: '芒果',
-  },
-  {
-    w: 'lemon',
-    o: '柠檬',
-  },
-  {
-    w: 'peach',
-    o: '桃子',
-  },
-  {
-    w: 'cherry',
-    o: '樱桃',
-  },
-  {
-    w: 'tomato',
-    o: '西红柿',
-  },
-  {
-    w: 'potato',
-    o: '土豆',
-  },
-  {
-    w: 'Tom',
-    t: 'whole',
-    a: ['Tim', 'Tony', 'Bob', 'Jerry', 'Bom', 'Tum', 'Tam', 'Tangmu', 'tmu'],
-    o: '你的英文名字',
-  },
-]
+import { words } from './words'
 
 export default async function () {
   const _w = words[Math.floor(Math.random() * words.length)]
@@ -82,7 +15,7 @@ export default async function () {
     answer = _w.w
     displayText = _w.o
 
-    speak = `${_w.t} 是什么`
+    speak = `${_w.o} 是什么`
   }
   else {
     // 随机缺失

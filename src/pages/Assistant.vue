@@ -39,9 +39,12 @@ const items = [
 .Assistant-Desc {
   position: relative;
 
-  left: 2rem;
+  left: 1rem;
 
-  width: 16rem;
+  width: calc(100% - 2rem);
+  height: 6rem;
+
+  /* background-color: red; */
 }
 
 .Assistant-Title {
@@ -57,7 +60,7 @@ const items = [
   position: relative;
 
   width: 20rem;
-  height: 10rem;
+  height: 9rem;
 
   margin: 1rem;
 
