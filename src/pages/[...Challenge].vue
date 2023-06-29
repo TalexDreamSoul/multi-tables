@@ -9,9 +9,10 @@ const route = useRoute()
 const [option, answer, start, timing] = use(dom)
 
 const types = {
-  normal: [100, -1, 0],
-  medium: [100, 15 * 60, 0],
-  hard: [100, 15 * 60, 0.8],
+  normal: [100, 15 * 60, 0],
+  medium: [100, 15 * 60, 0.8],
+  hard: [100, 10 * 60, 0.9],
+  c: [30, 5 * 60, 0.85],
 }
 
 onMounted(() => {

@@ -40,7 +40,7 @@ function speak(_msg: string) {
   })
 }
 
-const hooks = [multiTable, words, calc, choose, chooseWord, table]
+const hooks = [multiTable, words, calc, choose, chooseWord, table, table]
 
 export function use(_ele: any) {
   let total = 100

@@ -123,13 +123,101 @@ const vegetables = [
   },
 ]
 
+const others = [
+  {
+    w: 'book',
+    o: '书',
+  },
+  {
+    w: 'pen',
+    o: '笔',
+  },
+  {
+    w: 'pencil',
+    o: '铅笔',
+  },
+  {
+    w: 'ruler',
+    o: '尺子',
+  },
+  {
+    w: 'eraser',
+    o: '橡皮',
+  },
+  {
+    w: 'bag',
+    o: '书包',
+  },
+  {
+    w: 'desk',
+    o: '桌子',
+  },
+  {
+    w: 'chair',
+    o: '椅子',
+  },
+  {
+    w: 'bed',
+    o: '床',
+  },
+  {
+    w: 'window',
+    o: '窗户',
+  },
+  {
+    w: 'door',
+    o: '门',
+  },
+  {
+    w: 'floor',
+    o: '地板',
+  },
+  {
+    w: 'wall',
+    o: '墙',
+  },
+  {
+    w: 'ceiling',
+    o: '天花板',
+  },
+]
+
 export const words = [
   ...fruits,
   ...animals,
   ...vegetables,
+  ...others,
   {
     w: 'kite',
     o: '风筝',
+  },
+  {
+    w: 'car',
+    o: '汽车',
+  },
+  {
+    w: 'bus',
+    o: '公交车',
+  },
+  {
+    w: 'train',
+    o: '火车',
+  },
+  {
+    w: 'plane',
+    o: '飞机',
+  },
+  {
+    w: 'ship',
+    o: '船',
+  },
+  {
+    w: 'bike',
+    o: '自行车',
+  },
+  {
+    w: 'motorcycle',
+    o: '摩托车',
   },
   {
     w: 'Tom',
