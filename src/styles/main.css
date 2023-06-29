@@ -6,6 +6,7 @@ body,
   padding: 0;
 }
 
-html.dark {
+html {
+  color: #eee;
   background: #121212;
 }
