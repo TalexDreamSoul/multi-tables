@@ -86,7 +86,7 @@ export function use(_ele: any) {
           if (_timing.value._ >= time) {
             if (option.count < total) {
               await speak('练习结束，挑战失败！')
-              const _ = Math.round(option.correct / option.count * 100)
+              const _ = Math.round(option.correct / option.count)
               await speak(`正确率 ${_}%，未合格！`)
             }
 
