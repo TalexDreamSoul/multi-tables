@@ -139,85 +139,6 @@ const vegetables = [
   },
 ]
 
-const body = [
-  {
-    w: 'head',
-    o: '头',
-  },
-  {
-    w: 'hair',
-    o: '头发',
-  },
-  {
-    w: 'face',
-    o: '脸',
-  },
-  {
-    w: 'eye',
-    o: '眼睛',
-  },
-  {
-    w: 'nose',
-    o: '鼻子',
-  },
-  {
-    w: 'ear',
-    o: '耳朵',
-  },
-  {
-    w: 'mouth',
-    o: '嘴巴',
-  },
-  {
-    w: 'tooth',
-    o: '牙齿',
-  },
-  {
-    w: 'tongue',
-    o: '舌头',
-  },
-  {
-    w: 'neck',
-    o: '脖子',
-  },
-  {
-    w: 'shoulder',
-    o: '肩膀',
-  },
-  {
-    w: 'arm',
-    o: '手臂',
-  },
-  {
-    w: 'elbow',
-    o: '肘部',
-  },
-  {
-    w: 'hand',
-    o: '手',
-  },
-  {
-    w: 'finger',
-    o: '手指',
-  },
-  {
-    w: 'leg',
-    o: '腿',
-  },
-  {
-    w: 'knee',
-    o: '膝盖',
-  },
-  {
-    w: 'foot',
-    o: '脚',
-  },
-  {
-    w: 'toe',
-    o: '脚趾',
-  },
-]
-
 const others = [
   {
     w: 'book',
@@ -281,7 +202,6 @@ export const words = [
   ...fruits,
   ...animals,
   ...vegetables,
-  ...body,
   ...others,
   {
     w: 'kite',

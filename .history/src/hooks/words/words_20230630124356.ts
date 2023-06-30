@@ -281,7 +281,6 @@ export const words = [
   ...fruits,
   ...animals,
   ...vegetables,
-  ...body,
   ...others,
   {
     w: 'kite',

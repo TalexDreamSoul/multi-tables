@@ -66,9 +66,9 @@ export function use(_ele: any) {
   })
 
   async function end() {
-    const _ = Math.round(option.correct / option.count)
+    await speak('练习结束')
 
-    await speak(`练习结束, 正确率为${_ * 100}%`)
+    const _ = Math.round(option.correct / option.count)
 
     if (per > 0)
       await speak(_ >= per ? '恭喜你，通过了测试！' : '很遗憾，没有通过测试！')

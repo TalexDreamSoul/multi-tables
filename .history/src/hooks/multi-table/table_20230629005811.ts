@@ -1,7 +1,7 @@
 export default async function () {
   const options = []
 
-  const n1 = Math.floor(Math.random() * 3) + 1
+  const n1 = Math.floor(Math.random() * 2) + 1
   const n2 = Math.floor(Math.random() * 9) + 1
 
   const answer = genFormula(n1, n2)

@@ -7,10 +7,6 @@ const _w = computed(() => [...wrongs].reverse())
 
 <template>
   <p>我的错题</p>
-  <p>共 {{ wrongs.length }} 道错题</p>
-  <button @click="wrongs.clear()">
-    清空错题
-  </button>
   <br>
   <div class="Wrongs-Container">
     <div v-for="wrong in _w" :key="wrong.id" class="Wrong-Item">

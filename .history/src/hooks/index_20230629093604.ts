@@ -54,6 +54,10 @@ export function use(_ele: any) {
     t: time,
   })
 
+  function end() {
+    setTimeout(() => router.push('/assistant'), 1000)
+  }
+
   const option = reactive<IOption>({
     count: 1,
     correct: 0,
@@ -64,17 +68,6 @@ export function use(_ele: any) {
     displayText: '',
     showAnswer: false,
   })
-
-  async function end() {
-    const _ = Math.round(option.correct / option.count)
-
-    await speak(`练习结束, 正确率为${_ * 100}%`)
-
-    if (per > 0)
-      await speak(_ >= per ? '恭喜你，通过了测试！' : '很遗憾，没有通过测试！')
-
-    setTimeout(() => router.push('/assistant'), 1000)
-  }
 
   function start(total_ = 100, time_ = -1, per_ = 0) {
     total = total_
@@ -90,8 +83,17 @@ export function use(_ele: any) {
         async function timing() {
           _timing.value._ += 1
 
-          if (_timing.value._ >= time)
-            return end()
+          if (_timing.value._ >= time) {
+            if (option.count < total) {
+              await speak('练习结束，挑战失败！')
+              const _ = Math.round(option.correct / option.count)
+              await speak(`正确率 ${_}%，未合格！`)
+            }
+
+            end()
+
+            return
+          }
 
           setTimeout(timing, 1000)
         }
@@ -139,6 +141,13 @@ export function use(_ele: any) {
       await speak('答对了')
 
       if (option.count >= total) {
+        await speak('练习结束')
+
+        if (per > 0) {
+          const _ = Math.round(option.correct / option.count * 100)
+          await speak(_ >= per ? '恭喜你，通过了测试！' : '很遗憾，没有通过测试！')
+        }
+
         end()
 
         return

@@ -66,12 +66,18 @@ export function use(_ele: any) {
   })
 
   async function end() {
-    const _ = Math.round(option.correct / option.count)
+    await speak('练习结束')
 
-    await speak(`练习结束, 正确率为${_ * 100}%`)
+    if (option.count < total) {
+      await speak('练习结束，挑战失败！')
+      const _ = Math.round(option.correct / option.count)
+      await speak(`正确率 ${_}%，未合格！`)
+    }
 
-    if (per > 0)
+    if (per > 0) {
+      const _ = Math.round(option.correct / option.count)
       await speak(_ >= per ? '恭喜你，通过了测试！' : '很遗憾，没有通过测试！')
+    }
 
     setTimeout(() => router.push('/assistant'), 1000)
   }
