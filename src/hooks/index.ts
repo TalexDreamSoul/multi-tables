@@ -7,6 +7,7 @@ import calc from './calc'
 import choose from './words/choose'
 import chooseWord from './words/choose-word'
 import table from './multi-table/table'
+import complesCalc from './calc/comples-calc'
 
 export interface IOption {
   title: string
@@ -40,7 +41,7 @@ function speak(_msg: string) {
   })
 }
 
-const hooks = [multiTable, words, calc, choose, chooseWord, table, table]
+const hooks = [complesCalc, multiTable, words, calc, choose, chooseWord, table, complesCalc]
 
 export function use(_ele: any) {
   let total = 100
@@ -66,12 +67,18 @@ export function use(_ele: any) {
   })
 
   async function end() {
-    const _ = Math.round(option.correct / option.count)
+    // did issues completed
+    if (option.count < total) {
+      await speak(`很遗憾，还有${total - option.count}题未完成，测试失败！`)
+    }
+    else {
+      const _ = Math.round(option.correct / option.count)
 
-    await speak(`练习结束, 正确率为${_ * 100}%`)
+      await speak(`练习结束, 正确率为${_ * 100}%`)
 
-    if (per > 0)
-      await speak(_ >= per ? '恭喜你，通过了测试！' : '很遗憾，没有通过测试！')
+      if (per > 0)
+        await speak(_ >= per ? '恭喜你，通过了测试！' : '很遗憾，没有通过测试！')
+    }
 
     setTimeout(() => router.push('/assistant'), 1000)
   }

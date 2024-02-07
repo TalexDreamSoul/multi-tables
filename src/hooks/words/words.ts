@@ -277,12 +277,80 @@ const others = [
   },
 ]
 
+const colors = [
+  {
+    w: 'red',
+    o: '红色',
+  },
+  {
+    w: 'blue',
+    o: '蓝色',
+  },
+  {
+    w: 'green',
+    o: '绿色',
+  },
+  {
+    w: 'yellow',
+    o: '黄色',
+  },
+  {
+    w: 'white',
+    o: '白色',
+  },
+  {
+    w: 'black',
+    o: '黑色',
+  },
+  {
+    w: 'purple',
+    o: '紫色',
+  },
+  {
+    w: 'orange',
+    o: '橙色',
+  },
+  {
+    w: 'pink',
+    o: '粉红色',
+  },
+  {
+    w: 'brown',
+    o: '棕色',
+  },
+  {
+    w: 'gray',
+    o: '灰色',
+  },
+  {
+    w: 'silver',
+    o: '银色',
+  },
+  {
+    w: 'gold',
+    o: '金色',
+  },
+]
+
 export const words = [
   ...fruits,
   ...animals,
   ...vegetables,
   ...body,
+  ...colors,
   ...others,
+  {
+    w: 'fresh',
+    o: '新鲜的',
+  },
+  {
+    w: 'sled',
+    o: '雪橇',
+  },
+  {
+    w: 'spell',
+    o: '拼读',
+  },
   {
     w: 'kite',
     o: '风筝',
