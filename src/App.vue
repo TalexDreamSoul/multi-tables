@@ -14,10 +14,27 @@ onMounted(() => {
 <template>
   <div class="App-Container">
     <RouterView />
+
+    <div class="status">
+      EXERCISING PRACTICE
+      <span>
+        VERSION-24.02.07
+      </span>
+    </div>
   </div>
 </template>
 
 <style>
+.status {
+  position: absolute;
+
+  right: 1rem;
+  bottom: .5rem;
+
+  opacity: .5;
+  font-size: 14px;
+}
+
 .App-Container {
   position: absolute;
   padding: 2rem;
